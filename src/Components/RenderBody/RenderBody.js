@@ -5,55 +5,29 @@ import BoardingDetails from '../BoardingDetails/BoardingDetails';
 
 const RenderBody = (props) => {
 
-  const { flight_no, flight_date, origin, destination, departure_time, arrive_time, fare, origin_symbol, destination_symbol } = props
+  const { data } = props;
+  console.log(data)
   return (
     <div className='render-body'>
       <BoardingDetails
-        origin={origin}
-        destination={destination}
-        flight_date={flight_date}
+        origin={data.origin}
+        destination={data.destination}
+        flight_date={data.flight_date}
       />
       <div className='render-data'>
-        <Card
-          flight_no={flight_no}
-          origin_symbol={origin_symbol}
-          destination_symbol={destination_symbol}
-          departure_time={departure_time}
-          arrive_time={arrive_time}
-          fare={fare}
+        {data.map((value) => (
+          <Card
+          flight_no={value.flight_no}
+          origin_symbol={value.origin_symbol}
+          destination_symbol={value.destination_symbol}
+          departure_time={value.departure_time}
+          arrive_time={value.arrive_time}
+          fare={value.fare}
         />
-        <Card
-          flight_no={flight_no}
-          origin_symbol={origin_symbol}
-          destination_symbol={destination_symbol}
-          departure_time={departure_time}
-          arrive_time={arrive_time}
-          fare={fare}
-        />
-        <Card
-          flight_no={flight_no}
-          origin_symbol={origin_symbol}
-          destination_symbol={destination_symbol}
-          departure_time={departure_time}
-          arrive_time={arrive_time}
-          fare={fare}
-        />
-        <Card
-          flight_no={flight_no}
-          origin_symbol={origin_symbol}
-          destination_symbol={destination_symbol}
-          departure_time={departure_time}
-          arrive_time={arrive_time}
-          fare={fare}
-        />
-        <Card
-          flight_no={flight_no}
-          origin_symbol={origin_symbol}
-          destination_symbol={destination_symbol}
-          departure_time={departure_time}
-          arrive_time={arrive_time}
-          fare={fare}
-        />
+        )
+          
+        )}
+
       </div>
 
     </div>

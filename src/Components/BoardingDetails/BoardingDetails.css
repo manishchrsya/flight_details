@@ -1,12 +1,13 @@
 .container{
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     background-color: rgb(231, 231, 231);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid;
-    border-bottom: 1px solid;    
+    border-bottom: 1px solid;
+    box-shadow: 1.5px 1.5px 2px 2px rgb(192, 192, 192);    
 }
 .root{
     font-size: 16px;
@@ -19,3 +20,24 @@
     font-weight: 400;
     margin-right: 30px;
 }
+
+
+ @media screen and (max-width: 800px)
+{
+    .root{
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+
+} 
+
+@media screen and (max-width: 520px)
+{
+    .root{
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+
+} 
