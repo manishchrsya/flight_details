@@ -1,0 +1,14 @@
+.render-body{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.render-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    
+}
