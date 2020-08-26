@@ -8,7 +8,7 @@ const Card = (props) => {
         <div className='card-body'>
             <div className='flight-details'>
                 <div className='flight-fare'>
-                    <h3 style={{marginLeft:5}}>Rs. {fare}</h3>
+                    <h3 style={{ marginLeft: 5 }}>Rs. {fare}</h3>
                 </div>
                 <div className='flight-schedule'>
                     <div className='flight-oneway-return-details'>
@@ -27,7 +27,10 @@ const Card = (props) => {
             </div>
             <div className='flight-images'>
                 <img src={Logo} alt='Company logo' />
-                <button>Book this flight</button>
+                <button style={{
+                    backgroundColor: "green", border: "none",
+                    fontSize: 18, color: "white"
+                }}>Book this flight</button>
             </div>
         </div>
     )

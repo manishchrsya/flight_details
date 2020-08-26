@@ -1,8 +1,9 @@
+
 [
     {
         "id": 1,
         "flight_no": "AI-101",
-        "flight_date": "01-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Pune",
         "destination": "Delhi",
         "departure_time": "10:00",
@@ -12,9 +13,21 @@
         "destination_symbol": "DEL"
     },
     {
+        "id": 101,
+        "flight_no": "AI-102",
+        "available_days": ["Monday", "Wednesday", "Thuesday", "Friday", "Saturday"],
+        "origin": "Delhi",
+        "destination": "Pune",
+        "departure_time": "10:00",
+        "arrive_time": "12:00",
+        "fare": "5000",
+        "origin_symbol": "PNQ",
+        "destination_symbol": "DEL"
+    },
+    {
         "id": 2,
         "flight_no": "AI-102",
-        "flight_date": "01-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Pune",
         "destination": "Delhi",
         "departure_time": "15:00",
@@ -26,7 +39,7 @@
     {
         "id": 3,
         "flight_no": "AI-103",
-        "flight_date": "01-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Pune",
         "destination": "Delhi",
         "departure_time": "20:00",
@@ -38,7 +51,7 @@
     {
         "id": 4,
         "flight_no": "AI-201",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "pune",
         "departure_time": "11:00",
@@ -50,7 +63,7 @@
     {
         "id": 5,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -62,7 +75,7 @@
     {
         "id": 6,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -74,7 +87,7 @@
     {
         "id": 7,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -86,7 +99,7 @@
     {
         "id": 8,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -98,7 +111,7 @@
     {
         "id": 9,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -110,7 +123,7 @@
     {
         "id": 10,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -122,7 +135,7 @@
     {
         "id": 11,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -134,7 +147,7 @@
     {
         "id": 12,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -146,7 +159,7 @@
     {
         "id": 13,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -158,7 +171,7 @@
     {
         "id": 14,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -170,7 +183,7 @@
     {
         "id": 15,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -183,7 +196,7 @@
     {
         "id": 16,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -195,7 +208,7 @@
     {
         "id": 17,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -207,7 +220,7 @@
     {
         "id": 18,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -219,7 +232,7 @@
     {
         "id": 19,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",
@@ -231,7 +244,7 @@
     {
         "id": 20,
         "flight_no": "AI-202",
-        "flight_date": "06-01-2020",
+        "available_days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thuesday", "Friday", "Saturday"],
         "origin": "Delhi",
         "destination": "Pune",
         "departure_time": "14:00",

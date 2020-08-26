@@ -3,8 +3,11 @@
     height: 220px;
     border: 1px solid;
     margin: 20px auto;
+    padding: 5px;
     display: flex;
     background-color: rgb(231, 231, 231);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 .flight-details{
     flex: 2;
