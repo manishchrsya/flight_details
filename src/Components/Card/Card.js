@@ -17,12 +17,6 @@ const Card = (props) => {
                         <p>Depart: {departure_time} AM</p>
                         <p>Arrival: {arrive_time} PM</p>
                     </div>
-                    <div className='flight-oneway-return-details'>
-                        <h4 style={{ fontSize: 14 }}>{flight_no}</h4>
-                        <p>{origin_symbol} to{destination_symbol}</p>
-                        <p>Depart: {departure_time} AM</p>
-                        <p>Arrival: {arrive_time} PM</p>
-                    </div>
                 </div>
             </div>
             <div className='flight-images'>
@@ -30,7 +24,7 @@ const Card = (props) => {
                 <button style={{
                     backgroundColor: "green", border: "none",
                     fontSize: 18, color: "white"
-                }}>Book this flight</button>
+                }}>Book Now</button>
             </div>
         </div>
     )

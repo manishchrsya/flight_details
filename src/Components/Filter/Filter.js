@@ -1,37 +1,51 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Filter.css'
+// import moment from 'moment'; 
 
-const Filter = () => {
+const Filter = (props) => {
 
-    const [Toggle, setToggle] = useState(true);
+
+
+    const {oneWayToggle, handleOneWayToggle} = props
+    const{ handleOnOriginCityChange} = props
+    const{ handleOnDestinationCityChange} = props
+    const {handleOnJourneyDateChange}= props
+    const { handleOnReturnDateChange}= props
+    const{handleOnSearchBtnClick} = props
+
+
+    // console.log(originCity, destinationCity);
+
+
+    
 
     return (
         <div className='filter-body'>
             <div className='btn-container'
             >
-                <button className='btn' onClick={() => setToggle(true)}>One Way</button>
-                <button className='btn' onClick={() => setToggle(false)}>Return</button>
+                <button className='btn' onClick={() => handleOneWayToggle(true)}>One Way</button>
+                <button className='btn' onClick={() => handleOneWayToggle(false)}>Return</button>
             </div>
 
-            {Toggle === true ?
+            {oneWayToggle === true ?
                 <div className='input-data-section'>
                     <div className='input-lable-container'>
                         <label>From :-</label>
-                        <input type='text' placeholder='Enter Origin City' />
+                        <input onChange={handleOnOriginCityChange}  type='text' placeholder='Enter Origin City' />
                     </div>
                     <div className='input-lable-container'>
                         <label>To :-</label>
-                        <input type='text' placeholder='Enter Destination City' />
+                        <input onChange={handleOnDestinationCityChange} type='text' placeholder='Enter Destination City' />
                     </div>
                     <div className='input-lable-container'>
                         <label>Journey date :-</label>
-                        <input type='date' placeholder='Enter Depart date' />
+                        <input onChange={handleOnJourneyDateChange} type='date' placeholder='Enter Depart date' />
                     </div>
                     <div className='input-lable-container'>
                         <label>Passengers :-</label>
                         <input type='number' placeholder='Passengers' />
                     </div>
-                    <button>Search</button>
+                    <button onClick={()=>{handleOnSearchBtnClick()}}>Search</button>
                 </div>
 
                 :
@@ -39,25 +53,25 @@ const Filter = () => {
                 <div className='input-data-section'>
                     <div className='input-lable-container'>
                         <label>From :-</label>
-                        <input type='text' placeholder='Enter Origin City' />
+                        <input onChange={handleOnOriginCityChange} type='text' placeholder='Enter Origin City' />
                     </div>
                     <div className='input-lable-container'>
                         <label>To :-</label>
-                        <input type='text' placeholder='Enter Destination City' />
+                        <input onChange={handleOnDestinationCityChange} type='text' placeholder='Enter Destination City' />
                     </div>
                     <div className='input-lable-container'>
                         <label>Journey date :-</label>
-                        <input type='date' placeholder='Enter Depart date' />
+                        <input onChange={handleOnJourneyDateChange} type='date' placeholder='Enter Depart date' />
                     </div>
                     <div className='input-lable-container'>
                         <label>Return date :-</label>
-                        <input type='date' placeholder='Enter Depart date' />
+                        <input onChange={ handleOnReturnDateChange} type='date' placeholder='Enter Depart date' />
                     </div>
                     <div className='input-lable-container'>
                         <label>Passengers :-</label>
                         <input type='number' placeholder='Passengers' />
                     </div>
-                    <button>Search</button>
+                    <button onClick={()=>{handleOnSearchBtnClick()}} >Search</button>
                     
                 </div>
             }
