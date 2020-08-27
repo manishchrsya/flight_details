@@ -1,21 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './RenderBody.css';
 import Card from '../Card/Card';
 import BoardingDetails from '../BoardingDetails/BoardingDetails';
+import moment from 'moment';
 
 const RenderBody = (props) => {
 
   const { data } = props; // Json Data
 
 
-
-  //data comming from filter component
+  //data comming from filter component........
   const { oneWayToggle } = props;
   const { searchBtnClicked } = props;
-  const { destinationCity } = props;
-  const { originCity } = props;
-  const {journeyDate} = props;
-  const {returnDate}= props;
+  const  destinationCity  = props.destinationCity.toLowerCase();
+  const  originCity  = props.originCity.toLowerCase();
+  const { journeyDate } = props;
+  const { returnDate } = props;
+
+  console.log(originCity,destinationCity)
+
+  const dayName = moment(journeyDate).format('dddd');
+
+
+  // function for the filtered data............
+
+  const getFlights = (firstCity, lastCity, day) => {
+
+     return data.filter((finalData) => {
+
+      if (finalData.origin.toLowerCase() === firstCity && finalData.destination.toLowerCase() === lastCity && finalData.available_days.includes(day)) {
+        return finalData
+      }
+    })
+  }
+  
+  
+  const finaldata1 = getFlights(originCity, destinationCity, dayName); 
+
+  const finalData2= getFlights(destinationCity.toLowerCase(), originCity.toLowerCase(), dayName);
+
+    console.log('finalData1',finaldata1);
+    console.log('finaldata2',finalData2);
+  
 
 
   return (
@@ -31,7 +57,7 @@ const RenderBody = (props) => {
       {oneWayToggle ?
 
         <div className='render-data'>
-          {data.map((value) => (
+          {finaldata1.map((value) => (
             <Card
               flight_no={value.flight_no}
               origin_symbol={value.origin_symbol}
@@ -48,7 +74,7 @@ const RenderBody = (props) => {
 
         <div style={{ display: 'flex' }}>
           <div className='render-data'>
-            {data.map((value) => (
+            {finaldata1.map((value) => (
               <Card
                 flight_no={value.flight_no}
                 origin_symbol={value.origin_symbol}
@@ -61,7 +87,7 @@ const RenderBody = (props) => {
             )}
           </div>
           <div className='render-data'>
-            {data.map((value) => (
+            {finalData2.map((value) => (
               <Card
                 flight_no={value.flight_no}
                 origin_symbol={value.origin_symbol}

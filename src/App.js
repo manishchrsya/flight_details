@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import RenderBody from './Components/RenderBody/RenderBody'
-import Nav from './Components/Nav/Nav'
+import RenderBody from './Components/RenderBody/RenderBody';
+import Nav from './Components/Nav/Nav';
 import Filter from './Components/Filter/Filter';
-import data from './data.json'
+import data from './data.json';
+// import moment from 'moment';
 
 class App extends Component {
 
@@ -24,6 +25,7 @@ class App extends Component {
       returnDate: '',
     }
 
+    //  console.log('the new date is',moment().format(this.state.journeyDate));
   }
 
 
@@ -36,12 +38,12 @@ class App extends Component {
 
   handleOnOriginCityChange = (event) => {
     const { value } = event.target;
-    this.setState({ originCity: value.toUpperCase() })
+    this.setState({ originCity: value})
 
   }
   handleOnDestinationCityChange = (event) => {
     const { value } = event.target;
-    this.setState({ destinationCity: value.toUpperCase() })
+    this.setState({ destinationCity: value})
   }
   handleOnSearchBtnClick = () => {
     this.setState({ searchBtnClicked: true })
