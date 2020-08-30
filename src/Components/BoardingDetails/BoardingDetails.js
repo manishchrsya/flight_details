@@ -30,7 +30,7 @@ const BoardingDetails = (props) => {
                 </div>
             </div>
             :
-            <div style={{ display: 'flex', flexDirection: "row", width: 1150 }}>
+            <div style={{ display: 'flex', flexDirection: "row", width: '100%' }}>
                 <div className='container'>
                     <div className='root'>
                         <h1>{searchBtnClicked ? (originCity) : 'From'} &#62; {searchBtnClicked ? (destinationCity) : 'To'}</h1>

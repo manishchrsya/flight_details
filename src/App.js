@@ -15,7 +15,6 @@ class App extends Component {
       //data:-Json data  
       data,
 
-
       //Values generated from Filter Component
       oneWayToggle: true,
       originCity: '',
@@ -23,6 +22,7 @@ class App extends Component {
       searchBtnClicked: false,
       journeyDate: '',
       returnDate: '',
+      buttonDisabled: false,
     }
 
     //  console.log('the new date is',moment().format(this.state.journeyDate));
@@ -47,7 +47,6 @@ class App extends Component {
   }
   handleOnSearchBtnClick = () => {
     this.setState({ searchBtnClicked: true })
-    console.log('Searchbtn', this.state.searchBtnClicked)
   }
 
   handleOnJourneyDateChange = (event) => {
@@ -59,33 +58,45 @@ class App extends Component {
     this.setState({ returnDate: date });
   }
 
+  
+  // handleButtonDisabled = () =>{
+
+
+
+  //   if (this.state.originCity!=='' && this.state.destinationCity!=='' && this.state.journeyDate!=='' && buttonAPiCallFlag) {
+  //     this.setState({buttonDisabled:false})
+  //   }
+  // }
+
 
 
   render() {
+
+    const {searchBtnClicked, destinationCity, originCity, oneWayToggle, data, journeyDate, returnDate } = this.state
 
     return (
       <div className='main-container'>
         <Nav />
         <div className='body'>
           <Filter
-            searchBtnClicked={this.state.searchBtnClicked}
+            searchBtnClicked={searchBtnClicked}
             handleOnSearchBtnClick={this.handleOnSearchBtnClick}
-            destinationCity={this.state.destinationCity}
+            destinationCity={destinationCity}
             handleOnDestinationCityChange={this.handleOnDestinationCityChange}
-            originCity={this.state.originCity}
+            originCity={originCity}
             handleOnOriginCityChange={this.handleOnOriginCityChange}
             handleOneWayToggle={this.handleOneWayToggle}
-            oneWayToggle={this.state.oneWayToggle}
+            oneWayToggle={oneWayToggle}
             
             handleOnJourneyDateChange={this.handleOnJourneyDateChange}
             handleOnReturnDateChange={this.handleOnReturnDateChange} />
           <RenderBody
-            searchBtnClicked={this.state.searchBtnClicked}
-            destinationCity={this.state.destinationCity}
-            originCity={this.state.originCity}
-            oneWayToggle={this.state.oneWayToggle} data={this.state.data}
-            journeyDate={this.state.journeyDate}
-            returnDate={this.state.returnDate} />
+            searchBtnClicked={searchBtnClicked}
+            destinationCity={destinationCity}
+            originCity={originCity}
+            oneWayToggle={oneWayToggle} data={data}
+            journeyDate={journeyDate}
+            returnDate={returnDate} />
         </div>
       </div>
     )

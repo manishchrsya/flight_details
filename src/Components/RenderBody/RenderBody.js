@@ -10,12 +10,10 @@ const RenderBody = (props) => {
 
 
   //data comming from filter component........
-  const { oneWayToggle } = props;
-  const { searchBtnClicked } = props;
+  const { oneWayToggle,journeyDate,searchBtnClicked,returnDate } = props;
   const  destinationCity  = props.destinationCity.toLowerCase();
   const  originCity  = props.originCity.toLowerCase();
-  const { journeyDate } = props;
-  const { returnDate } = props;
+
 
   console.log(originCity,destinationCity)
 
@@ -39,9 +37,6 @@ const RenderBody = (props) => {
 
   const finalData2= getFlights(destinationCity.toLowerCase(), originCity.toLowerCase(), dayName);
 
-    console.log('finalData1',finaldata1);
-    console.log('finaldata2',finalData2);
-  
 
 
   return (

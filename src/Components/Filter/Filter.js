@@ -1,22 +1,12 @@
 import React from 'react';
 import './Filter.css'
-// import moment from 'moment'; 
+import moment from 'moment';
 
 const Filter = (props) => {
 
 
 
-    const {oneWayToggle, handleOneWayToggle} = props
-    const{ handleOnOriginCityChange} = props
-    const{ handleOnDestinationCityChange} = props
-    const {handleOnJourneyDateChange}= props
-    const { handleOnReturnDateChange}= props
-    const{handleOnSearchBtnClick} = props
-
-
-    // console.log(originCity, destinationCity);
-
-
+    const { oneWayToggle, handleOneWayToggle,handleOnOriginCityChange,handleOnDestinationCityChange,handleOnJourneyDateChange,handleOnReturnDateChange,handleOnSearchBtnClick } = props
     
 
     return (
@@ -27,29 +17,7 @@ const Filter = (props) => {
                 <button className='btn' onClick={() => handleOneWayToggle(false)}>Return</button>
             </div>
 
-            {oneWayToggle === true ?
-                <div className='input-data-section'>
-                    <div className='input-lable-container'>
-                        <label>From :-</label>
-                        <input onChange={handleOnOriginCityChange}  type='text' placeholder='Enter Origin City' />
-                    </div>
-                    <div className='input-lable-container'>
-                        <label>To :-</label>
-                        <input onChange={handleOnDestinationCityChange} type='text' placeholder='Enter Destination City' />
-                    </div>
-                    <div className='input-lable-container'>
-                        <label>Journey date :-</label>
-                        <input onChange={handleOnJourneyDateChange} type='date' placeholder='Enter Depart date' />
-                    </div>
-                    <div className='input-lable-container'>
-                        <label>Passengers :-</label>
-                        <input type='number' placeholder='Passengers' />
-                    </div>
-                    <button onClick={()=>{handleOnSearchBtnClick()}}>Search</button>
-                </div>
-
-                :
-
+            
                 <div className='input-data-section'>
                     <div className='input-lable-container'>
                         <label>From :-</label>
@@ -61,22 +29,25 @@ const Filter = (props) => {
                     </div>
                     <div className='input-lable-container'>
                         <label>Journey date :-</label>
-                        <input onChange={handleOnJourneyDateChange} type='date' placeholder='Enter Depart date' />
+                        <input onChange={handleOnJourneyDateChange} type='date' placeholder='Enter Depart date' min={moment().format("YYYY-MM-DD")} />
                     </div>
-                    <div className='input-lable-container'>
-                        <label>Return date :-</label>
-                        <input onChange={ handleOnReturnDateChange} type='date' placeholder='Enter Depart date' />
-                    </div>
+                    {!oneWayToggle ?
+                        <div className='input-lable-container'>
+                            <label>Return date :-</label>
+                            <input onChange={handleOnReturnDateChange} type='date' placeholder='Enter Depart date' min={moment().format("YYYY-MM-DD")} />
+                        </div>
+                        : null
+                    }
                     <div className='input-lable-container'>
                         <label>Passengers :-</label>
                         <input type='number' placeholder='Passengers' />
                     </div>
-                    <button onClick={()=>{handleOnSearchBtnClick()}} >Search</button>
                     
                 </div>
-            }
+                <div className='search-btn'>
+                    <button onClick={() => { handleOnSearchBtnClick() }}>Search</button>
+                </div>
         </div>
-
     )
 }
 

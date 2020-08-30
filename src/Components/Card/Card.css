@@ -1,8 +1,8 @@
 .card-body{
-    width: 450px;
+    max-width: 450px;
     height: 150px;
     border: 1px solid;
-    margin: 20px auto;
+    margin: 20px ;
     padding: 5px;
     display: flex;
     background-color: rgb(231, 231, 231);
@@ -46,4 +46,34 @@
     margin-top: auto;
     margin-bottom: auto;
     font-size: 16px;   
+}
+
+
+
+
+@media screen and (max-width: 1090px)
+{
+
+    .card-body{
+        width: 180px;
+        height: 200px;
+        margin: 20px auto;
+        padding: 5px;
+        padding-bottom: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-body img {
+        display: none;
+    }
+
+    .flight-oneway-return-details{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px auto;
+    }
+    
 }
